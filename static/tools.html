@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Инструменты – Мир деревообработки</title>
+  <style>
+    :root { --primary-color: #b47a44; --secondary-color: #2f2f2f; --light-bg: #faf7f2; --text-color: #333; --max-width: 1200px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--light-bg); color: var(--text-color); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    header { background-color: white; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 10; }
+    .nav-container { max-width: var(--max-width); margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; }
+    nav li { position: relative; }
+    nav > ul > li > a { padding: 0.5rem 0.75rem; color: var(--text-color); font-size: 0.95rem; }
+    nav > ul > li > a:hover { color: var(--primary-color); }
+    nav li ul { position: absolute; top: 100%; left: 0; background-color: white; min-width: 180px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: none; z-index: 5; }
+    nav li:hover ul { display: block; }
+    nav li ul li a { display: block; padding: 0.5rem 0.75rem; color: var(--text-color); white-space: nowrap; }
+    nav li ul li a:hover { background-color: #f5f5f5; color: var(--primary-color); }
+    main { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1rem; }
+    h1 { font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem; text-align: center; }
+    .section { margin-bottom: 3rem; }
+    .section h2 { font-size: 1.6rem; color: var(--primary-color); margin-bottom: 1rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .card { background-color: white; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; }
+    .card img { width: 100%; height: 160px; object-fit: cover; }
+    .card-content { padding: 1rem; flex-grow: 1; }
+    .card-content h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .card-content p { font-size: 0.9rem; color: #555; }
+    .card-content a { margin-top: 1rem; display: inline-block; color: var(--primary-color); font-weight: bold; }
+    footer { background-color: var(--secondary-color); color: #ccc; padding: 2rem 1rem; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2rem; }
+    .footer-column { flex: 1 1 200px; }
+    .footer-column h4 { color: #fff; margin-bottom: 0.75rem; }
+    .footer-column ul { list-style: none; }
+    .footer-column a { color: #ccc; font-size: 0.9rem; }
+    .footer-column a:hover { color: var(--primary-color); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Деревообработка</a></div>
+      <nav>
+        <ul>
+          <li>
+            <a href="articles.html">Статьи</a>
+            <ul>
+              <li><a href="articles.html#techniques">Техники</a></li>
+              <li><a href="articles.html#finishing">Отделка</a></li>
+              <li><a href="articles.html#assembly">Сборка</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="projects.html">Проекты &amp; Чертежи</a>
+            <ul>
+              <li><a href="projects.html#furniture">Мебель</a></li>
+              <li><a href="projects.html#decor">Декор</a></li>
+              <li><a href="projects.html#home">Для&nbsp;дома</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="videos.html">Видео</a>
+            <ul>
+              <li><a href="videos.html#tools">Уроки по инструментам</a></li>
+              <li><a href="videos.html#master">Мастер‑классы</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="tools.html" class="active">Инструменты</a>
+            <ul>
+              <li><a href="#hand">Ручные</a></li>
+              <li><a href="#power">Электрические</a></li>
+              <li><a href="#reviews">Обзоры</a></li>
+            </ul>
+          </li>
+          <li><a href="blogs.html">Блоги</a></li>
+          <li><a href="design.html">Дизайн</a></li>
+          <li><a href="forum.html">Форум</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="archive.html">Архив</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Инструменты</h1>
+    <div class="section" id="hand">
+      <h2>Ручные инструменты</h2>
+      <p>Классические инструменты, проверенные временем. В этом разделе вы найдёте обзоры и советы по выбору и использованию рубанков, стамесок, пил и прочих ручных приспособлений.</p>
+      <div class="card-grid">
+        <div class="card">
+          <img src="hero_wood.png" alt="Рубанок">
+          <div class="card-content">
+            <h3>Сравнение рубанков</h3>
+            <p>Выбираем между металлическими и деревянными рубанками и учимся их настраивать.</p>
+            <a href="#">Читать обзор</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="hero_wood.png" alt="Стамеска">
+          <div class="card-content">
+            <h3>Стамески для тонкой работы</h3>
+            <p>Как выбрать стамеску для резьбы и какая заточка обеспечит чистый рез.</p>
+            <a href="#">Читать обзор</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="power">
+      <h2>Электрические инструменты</h2>
+      <p>Современная техника, ускоряющая работу: фрезеры, циркулярные пилы, шлифовальные машинки и многое другое. Узнайте, как подобрать и безопасно использовать электроинструмент.</p>
+      <div class="card-grid">
+        <div class="card">
+          <img src="hero_wood.png" alt="Фрезер">
+          <div class="card-content">
+            <h3>Выбор фрезера</h3>
+            <p>Основные параметры фрезеров и советы по выбору моделей для домашней мастерской.</p>
+            <a href="#">Читать обзор</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="hero_wood.png" alt="Шлифовальная машина">
+          <div class="card-content">
+            <h3>Лучшие шлифмашины</h3>
+            <p>Сравнение ленточных, орбитальных и вибрационных шлифмашин для разных задач.</p>
+            <a href="#">Читать обзор</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="reviews">
+      <h2>Обзоры</h2>
+      <p>Независимые отзывы и рейтинги инструментов, которые помогут сделать правильный выбор. Подробные тесты, плюсы и минусы популярных моделей.</p>
+      <div class="card-grid">
+        <div class="card">
+          <img src="hero_wood.png" alt="Обзор наборов">
+          <div class="card-content">
+            <h3>Наборы для начинающих</h3>
+            <p>Подборка оптимальных наборов для тех, кто только начинает заниматься столярным делом.</p>
+            <a href="#">Читать обзор</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="hero_wood.png" alt="Обзор пил">
+          <div class="card-content">
+            <h3>Лучшие ручные пилы</h3>
+            <p>Сравнение качества реза, удобства и цены популярнейших моделей.</p>
+            <a href="#">Читать обзор</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-column">
+        <h4>О сайте</h4>
+        <ul>
+          <li><a href="design.html">Дизайн</a></li>
+          <li><a href="blogs.html">Блоги</a></li>
+          <li><a href="archive.html">Архив</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="articles.html">Статьи</a></li>
+          <li><a href="projects.html">Проекты</a></li>
+          <li><a href="videos.html">Видео</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Сообщество</h4>
+        <ul>
+          <li><a href="forum.html">Форум</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="blogs.html">Блоги</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="#">E‑mail: info@example.ru</a></li>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:2rem; font-size:0.8rem;">&copy; 2025 Мир деревообработки. Все права защищены.</p>
+  </footer>
+</body>
+</html>
